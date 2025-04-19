@@ -11,6 +11,7 @@ import com.saja.mymemo.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "Memo_Main";
     private ActivityMainBinding binding;
     private MemoDataBinding viewModel;
 

@@ -7,21 +7,21 @@ import androidx.lifecycle.ViewModelProvider;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.saja.mymemo.data.MemoDataBinding;
+import com.saja.mymemo.data.MemoViewNodel;
 import com.saja.mymemo.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "Memo_Main";
     private ActivityMainBinding binding;
-    private MemoDataBinding viewModel;
+    private MemoViewNodel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate!");
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        viewModel = new ViewModelProvider(this).get(MemoDataBinding.class);
+        viewModel = new ViewModelProvider(this).get(MemoViewNodel.class);
 
         binding.setLifecycleOwner(this);
         binding.setViewModel(viewModel);
